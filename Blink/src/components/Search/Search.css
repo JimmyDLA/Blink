@@ -1,0 +1,16 @@
+.searchButton{
+  font-size: 1.5em;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+#form-container{
+  margin-top: 20px;
+}
+
+#searchForm{
+  padding: 10px;
+  width: 20em;
+  border-radius: 2px;
+  font-size: 20px;
+}
