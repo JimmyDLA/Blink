@@ -10,12 +10,34 @@
   padding-right: 40px;
   margin-top:-65px;
   margin-bottom: 50px;
-  margin-left:36px;
+  margin-left:35px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+/*  -webkit-box-shadow: 6px 7px 9px -6px rgba(210,212,211,1);
+-moz-box-shadow: 6px 7px 9px -6px rgba(210,212,211,1);
+box-shadow: 6px 7px 9px -6px rgba(210,212,211,1);*/
+/*  position: absolute;*/
+}
+
+.complete-button{
+    font-size: 1.5em;
+/*  border-radius: 1px;*/
+/*background-color: tomato;*/
+  background-color: #0BD4C6;
+ /* background-color: #222;*/
+  color: white;
+  height: 60px;
+  width: 480px;
+ /* padding-left: 40px;*/
+  padding-right: 40px;
+  margin-top:-65px;
+  margin-bottom: 50px;
+/*  margin-left:36px;*/
   border: none;
   cursor: pointer;
   text-transform: uppercase;
   -webkit-box-shadow: 6px 7px 9px -6px rgba(210,212,211,1);
 -moz-box-shadow: 6px 7px 9px -6px rgba(210,212,211,1);
 box-shadow: 6px 7px 9px -6px rgba(210,212,211,1);
-/*  position: absolute;*/
 }

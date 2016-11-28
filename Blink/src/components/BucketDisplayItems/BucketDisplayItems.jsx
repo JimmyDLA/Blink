@@ -41,8 +41,12 @@ const BucketDisplayItems = props => (
         <div className="pendingContainer">
               {generateSaved(props)}
         </div>
-        <div className="completedContainer">
+                 <div className="completedContainer">
               {generateCompleted(props)}
+
+        <div className="flex-container-complete">
+
+        </div>
         </div>
 
       </div>
