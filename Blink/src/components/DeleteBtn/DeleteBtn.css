@@ -1,0 +1,9 @@
+.add-button:hover{
+  background-color: #006466;
+  outline: none;
+}
+
+.add-button:active{
+  animation: pulse .3s;
+  outline: none;
+}
