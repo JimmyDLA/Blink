@@ -1,11 +1,59 @@
-#logo-text {
+.logo-text {
   font-size: 105px;
   line-height: 150px;
-  /*color: #008B8B;*/
   color: #0BD4C6;
   font-family: 'Baloo Bhaina', cursive;
-  position: relative;
-  padding-left: 105px;
+  margin-left: 60px;
+  padding-top:16px;
+}
 
-  /*float:right;*/
+
+.logo {
+  width: 125px;
+  height:125px;
+ background-image: url(/../../../../images/cyan_icon.png);
+ position:absolute;
+ left:0.1%;
+ margin-top:-13px;
+}
+
+.tag-line {
+  padding-top: 40px;
+  font-size: 21px;
+  position:absolute;
+  left:9%;
+  color: white;
+  padding-left: 8px;
+
+
+
+
+
+}
+
+.user-photo{
+  border: 1px solid #0BD4C6;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  float: right;
+}
+
+.user-name{
+  float: right;
+  margin-top:-30px;
+  line-height: 25px;
+  font-size: .9em;
+  text-align: center;
+  margin-right: -15px;
+
+
+
+}
+
+.user-icon {
+  margin-top:15px;
+  position:absolute;
+  left:90%;
+  padding-right:60px;
 }

@@ -1,7 +1,49 @@
-.bucketList{
+.false{
+  width: 100vw;
   height:100vh;
-  width: 50vw;
-  border: 3px solid orange;
   position: absolute;
-  background-color: #008B8B;
+  display: flex;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  transform: translateX(-94vw);
+  transition: transform 1s;
+}
+
+.true{
+  width: 100vw;
+  height:100%;
+  position: absolute;
+  display: flex;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  transition: transform 1s;
+}
+
+.transparent{
+  height:100%;
+  width: 6vw;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.content{
+  width: 94%;
+  height: 100%;
+  background-color: #008B8D;
+}
+
+.handle{
+  font-size: 45px;
+  color: #006466;
+  letter-spacing: -3px;
+  background-color: #008B8D;
+  border-top-right-radius:8px;
+  border-bottom-right-radius:8px;
+  padding:7px;
+}
+
+.handle:hover{
+  color: #004b4d;
+  transition: color .5s;
 }

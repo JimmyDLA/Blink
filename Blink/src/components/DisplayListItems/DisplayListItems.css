@@ -1,8 +1,14 @@
 .SearchItemContainer{
-  display: flex;
-  flex-direction: column;
+  display:flex;
+  flex-direction: row;
+/*  flex-direction: reverse;*/
+/*  justify-content: flex-end;*/
+  flex-wrap: wrap;
+  justify-content: center;
  /* background-color: gray;*/
-  width: 700px;
-  height: 110vh;
+  width: 100vw;
+/*  height: 110vh;*/
+height: 100%;
   margin:auto;
+  align-items: baseline;
 }

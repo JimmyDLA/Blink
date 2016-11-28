@@ -1,9 +1,9 @@
 import React from 'react';
 import './AddBtn.css';
 const AddBtn = props => (
-  <button
+  <button className="add-button"
     onClick={() => props.handleAddClick(props.details)}
-    >Add to Bucket</button>
+    >Add</button>
 );
 
 export default AddBtn;

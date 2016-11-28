@@ -4,6 +4,7 @@ export default class AjaxAdapter {
       credentials: 'include'
     })
   }
+
   static getUserData() {
     return fetch('/api/getUserData', {
       credentials: 'include'
@@ -24,18 +25,6 @@ export default class AjaxAdapter {
         'Content-Type': 'application/json'
       },
       method: 'POST',
-      body: JSON.stringify(payload)
-    })
-    .then((r) => r.json())
-  }
-
-  static deathSearch(death) {
-    const payload = { death }
-    return fetch('/api/getUserData', {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      method: 'GET',
       body: JSON.stringify(payload)
     })
     .then((r) => r.json())

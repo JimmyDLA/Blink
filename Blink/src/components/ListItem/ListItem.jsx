@@ -9,6 +9,7 @@ class ListItem extends Component {
     <p className="address">{this.props.address}</p>
     <p className="rating">rating  {this.props.rating}</p>
     <img src={this.props.image} alt={this.props.Title}/>
+
 </div>
     );
   }
