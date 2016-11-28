@@ -27,11 +27,20 @@ class App extends Component {
         name: 'none',
         bday: 'none',
         age: 'none',
-        profile_img: ''
+        profile_img: '',
+        death: 0
       },
       bucket: {
         pending: [],
         completed: []
+      },
+      userClock: {
+        YY: 0,
+        MM: 0,
+        DD: 0,
+        hh: 0,
+        mm: 0,
+        ss: 0
       }
     }
   }
@@ -122,8 +131,7 @@ class App extends Component {
       this.setState({
         userClock: {ss: this.state.userClock.ss - 1}})
       }
-
-  setInterval(deathClock, 1000);
+    }
 
 
   searchGooglePlaces() {
@@ -170,6 +178,7 @@ class App extends Component {
       })
     })
   }
+  
   getBucket() {
     AjaxAdapter.getBucket(this.state.userProfile.id)
     .then((data) => {

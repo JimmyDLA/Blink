@@ -9,7 +9,7 @@ class Time extends Component {
         <div>{this.props.death}</div>
         <button
           className="deathTime"
-          onClick={}></button>
+        >click here</button>
       </div>
       /* function and display to take birthday information and insert
       into population API which then results in the life expentancy result....
