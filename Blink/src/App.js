@@ -122,8 +122,8 @@ class App extends Component {
       this.setState({
         userClock: {ss: this.state.userClock.ss - 1}})
       }
+    }
 
-  setInterval(deathClock, 1000);
 
 
   searchGooglePlaces() {

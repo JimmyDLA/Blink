@@ -11,7 +11,7 @@ const sessionErrorHandler = (err, req, res, next) => {
 }
 // routes for user login
 router.route('/getUserData')
-  .get(getUserProfile, death, sendResponse, sessionErrorHandler)
+  .get(getUserProfile, sendResponse, sessionErrorHandler)
 
 router.route('/getAllUsers')
   .get(getAllUsers, sendResponse)
