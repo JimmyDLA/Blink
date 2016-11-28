@@ -4,6 +4,7 @@ import Search from './components/Search/Search';
 import DisplayListItems from './components/DisplayListItems/DisplayListItems';
 import UserInfo from './components/UserInfo/UserInfo';
 import BucketDisplay from './components/BucketDisplay/BucketDisplay';
+import Time from './components/Time/Time';
 import './App.css';
 
 import AjaxAdapter from './HelperUtils/AjaxAdapter'
@@ -26,7 +27,16 @@ class App extends Component {
         name: 'none',
         bday: 'none',
         age: 'none',
-        profile_img: 'none'
+        profile_img: 'none',
+        death: 0
+      }
+      userClock: {
+        YY: 0,
+        MM: 0,
+        DD: 0,
+        hh: 0,
+        mm: 0,
+        ss: 0
       }
     }
   }
@@ -63,6 +73,56 @@ class App extends Component {
     });
   }
 
+  deathClock(){
+    if(this.state.userClock.ss === 0){
+      this.setState({
+        userClock: {ss: 60 - 1}
+      })
+      if(this.state.userClock.ss === 0){
+        this.setState({
+          userClock: {mm : 60 - 1 }
+        })
+        if(this.state.userClock.mm === 0){
+          this.setState({
+            userClock: {hh: 24 - 1}
+          })
+          if(this.state.userClock.hh === 0){
+            this.setState({
+              userClock: {DD: 30 - 1}
+            })
+            if(this.state.userClock.DD === 0){
+              this.setState({
+                userClock: {MM: 12 - 1}
+              })
+              if(this.state.userClock.MM === 0){
+                this.setState({
+                  userClock: {YY: this.state.userClock.YY - 1}
+                })
+              }
+            } else{
+              this.setState({
+                userClock: {MM: this.state.userClock.MM - 1}})
+              }
+          } else{
+            this.setState({
+              userClock: {DD: this.state.userClock.DD - 1}})
+            }
+        } else{
+          this.setState({
+            userClock: {hh: this.state.userClock.hh - 1}})
+          }
+      }else{
+        this.setState({
+          userClock: {mm: this.state.userClock.mm - 1}})
+        }
+    } else{
+      this.setState({
+        userClock: {ss: this.state.userClock.ss - 1}})
+      }
+      
+  setInterval(deathClock, 1000);
+
+
   searchGooglePlaces() {
     AjaxAdapter.googleSearch(this.state.searchTerms)
     .then((data) => {
@@ -95,7 +155,8 @@ class App extends Component {
           name: data.userProfile.name,
           bday: data.userProfile.bday,
           age: data.userProfile.age,
-          profile_img: data.userProfile.profile_img
+          profile_img: data.userProfile.profile_img,
+          death: data.userProfile.death
         }
       })
     })
@@ -125,6 +186,11 @@ class App extends Component {
           handleSearchInput={(event) => this.handleSearchInput(event)}
           handleToggleDrawer={() => this.handleToggleDrawer()}
         />
+
+        <Time
+          death={this.state.userProfile.death}
+        />
+
         <DisplayListItems
           handleAddClick={(gEvent) => this.handleAddClick(gEvent)}
           userId={this.state.userProfile.id}

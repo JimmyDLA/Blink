@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { getUserProfile, getAllUsers, saveDOB } = require('./../models/userData');
 const { textSearch, imgSearch } = require('./../services/googleSearch');
+const { death } = require('./../services/lifeExp');
 const { addToBucket } = require('./../models/usersBucket');
 
 const sendResponse = (req, res) => res.json(res.data);
@@ -11,7 +12,7 @@ const sessionErrorHandler = (err, req, res, next) => {
 }
 // routes for user login
 router.route('/getUserData')
-  .get(getUserProfile, sendResponse, sessionErrorHandler)
+  .get(getUserProfile, death, sendResponse, sessionErrorHandler)
 
 router.route('/getAllUsers')
   .get(getAllUsers, sendResponse)

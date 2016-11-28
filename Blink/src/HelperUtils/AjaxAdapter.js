@@ -29,6 +29,19 @@ export default class AjaxAdapter {
     .then((r) => r.json())
   }
 
+  static deathSearch(death) {
+    const payload = { death }
+    return fetch('/api/getUserData', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'GET',
+      body: JSON.stringify(payload)
+    })
+    .then((r) => r.json())
+  }
+
+
   static saveDOB(dobInput) {
     const payload = {...dobInput}
     return fetch ('/api/saveDOB', {
