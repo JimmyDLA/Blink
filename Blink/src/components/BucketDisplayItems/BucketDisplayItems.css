@@ -1,6 +1,6 @@
 .pendingContainer {
   width: 300px;
-  margin-left: 50px;
+  margin-left: 150px;
 }
 
 .flex-container {
@@ -15,7 +15,7 @@
 .completedContainer {
 /*  right: 20%;*/
 /*  width: 300px;*/
-margin-right: 150px;
+margin-right: 200px;
 }
 
 .flex-container-complete {
