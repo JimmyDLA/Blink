@@ -11,4 +11,6 @@
 height: 100%;
   margin:auto;
   align-items: baseline;
+  overflow:scroll;
+  height:80vh;
 }
