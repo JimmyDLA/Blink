@@ -11,7 +11,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   overflow: scroll;
-  height: 990px;
+  height: 100vh;
 }
 
 .completedContainer {
