@@ -4,7 +4,6 @@ export default class AjaxAdapter {
       credentials: 'include'
     })
   }
-
   static getUserData() {
     return fetch('/api/getUserData', {
       credentials: 'include'
@@ -30,7 +29,6 @@ export default class AjaxAdapter {
     .then((r) => r.json())
   }
 
-
   static saveDOB(dobInput) {
     const payload = {...dobInput}
     return fetch ('/api/saveDOB', {
@@ -49,6 +47,36 @@ export default class AjaxAdapter {
         'Content-Type': 'application/json'
       },
       method: 'POST',
+      body: JSON.stringify(payload)
+    })
+  }
+  static getBucket(user_id) {
+    return fetch('/api/bucket', {
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'GET',
+    })
+    .then((r) => r.json())
+  }
+  static completeEvent(id) {
+    const payload = { id }
+    return fetch('/api/bucket', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'PUT',
+      body: JSON.stringify(payload)
+    })
+  }
+  static deleteEvent(id) {
+    const payload = { id }
+    return fetch('/api/bucket', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'DELETE',
       body: JSON.stringify(payload)
     })
   }
